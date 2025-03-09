@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ChakraProvider, createSystem } from "@chakra-ui/react"; // Correct import for v2
+import App from "./App";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import themeConfig from "../theme";
+
+const system = createSystem(themeConfig);
+
+// Render the app
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ChakraProvider value={system}>
+      <App />
+    </ChakraProvider>
+  </React.StrictMode>
+);
