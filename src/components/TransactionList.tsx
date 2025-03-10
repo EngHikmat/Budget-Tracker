@@ -5,7 +5,24 @@ export default function TransactionList() {
   const { transactions, removeTransaction } = useBudgetStore();
 
   return (
-    <VStack gap={4} w="full">
+    <VStack
+      gap={4}
+      w="full"
+      overflowY="scroll"
+      h="50vh"
+      css={{
+        "&::-webkit-scrollbar": {
+          width: "2px",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          backgroundColor: "black",
+          borderRadius: "2px",
+        },
+        "&::-webkit-scrollbar-track": {
+          backgroundColor: "#e2e8f0",
+        },
+      }}
+    >
       {transactions.length === 0 ? (
         <Text>لا توجد معاملات بعد</Text>
       ) : (
