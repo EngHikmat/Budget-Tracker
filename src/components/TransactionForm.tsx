@@ -84,7 +84,12 @@ export default function TransactionForm() {
             </SelectContent>
           </SelectRoot>
         </Field.Root>
-        <Button type="submit" colorScheme="brand" w="full">
+        <Button
+          type="submit"
+          bg="brand.500"
+          _hover={{ bg: "brand.300" }}
+          w="full"
+        >
           إضافة
         </Button>
       </VStack>

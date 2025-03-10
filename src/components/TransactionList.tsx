@@ -31,7 +31,7 @@ export default function TransactionList() {
             key={t.id}
             w="full"
             p={4}
-            bg={t.type[0] === "income" ? "green.50" : "red.50"}
+            bg={t.type[0] === "income" ? "green.200" : "red.200"}
             borderRadius="md"
             justify="space-between"
             align="center"
@@ -48,8 +48,9 @@ export default function TransactionList() {
               </Text>
               <Button
                 size="sm"
-                colorScheme="red"
                 onClick={() => removeTransaction(t.id)}
+                bg="brand.500"
+                _hover={{ bg: "brand.300" }}
               >
                 حذف
               </Button>

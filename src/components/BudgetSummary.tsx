@@ -20,44 +20,49 @@ export default function BudgetSummary() {
   return (
     <SimpleGrid columns={{ base: 1, md: 3 }} gap={4} w="full">
       <Stat.Root
-        bg="green.100"
+        bg="brand.500"
         p={4}
         borderRadius="lg"
         shadow="md"
         transition="all 0.2s"
         _hover={{ shadow: "lg" }}
+        color="white"
       >
         <Stat.ValueText fontWeight="bold">الإيرادات</Stat.ValueText>
-        <Stat.ValueUnit>{totalIncome} دينار</Stat.ValueUnit>
-        <StatHelpText>إجمالي المدخلات</StatHelpText>
+        <Stat.ValueUnit color="white">{totalIncome} دينار</Stat.ValueUnit>
+        <StatHelpText color="white">إجمالي المدخلات</StatHelpText>
       </Stat.Root>
       <Stat.Root
-        bg="red.100"
+        bg="brand.500"
         p={4}
         borderRadius="lg"
         shadow="md"
         transition="all 0.2s"
         _hover={{ shadow: "lg" }}
+        color="white"
       >
         <Stat.ValueText fontWeight="bold">المصروفات</Stat.ValueText>
-        <Stat.ValueUnit>{getTotalExpenses()} دينار</Stat.ValueUnit>
-        <StatHelpText>إجمالي المخرجات</StatHelpText>
+        <Stat.ValueUnit color="white">
+          {getTotalExpenses()} دينار
+        </Stat.ValueUnit>
+        <StatHelpText color="white">إجمالي المخرجات</StatHelpText>
       </Stat.Root>
       <Stat.Root
-        bg="blue.100"
+        bg="brand.500"
         p={4}
         borderRadius="lg"
         shadow="md"
         transition="all 0.2s"
         _hover={{ shadow: "lg" }}
+        color="white"
       >
         <Stat.ValueText fontWeight="bold">الرصيد</Stat.ValueText>
-        <Flex align="center" justify="space-between">
-          <Stat.ValueUnit>{balance} دينار</Stat.ValueUnit>
+        <Flex align="start" justify="space-between">
+          <Stat.ValueUnit color="white">{balance} دينار</Stat.ValueUnit>
           <ProgressCircle.Root size="md" value={remainingPercentage}>
             <ProgressCircle.Circle>
               <ProgressCircle.Track />
-              <ProgressCircle.Range />
+              <ProgressCircle.Range stroke="green.500" />
             </ProgressCircle.Circle>
 
             <Box
@@ -72,7 +77,7 @@ export default function BudgetSummary() {
             </Box>
           </ProgressCircle.Root>
         </Flex>
-        <StatHelpText>النسبة المتبقية من الإيرادات</StatHelpText>
+        <StatHelpText color="white">النسبة المتبقية من الإيرادات</StatHelpText>
       </Stat.Root>
     </SimpleGrid>
   );
