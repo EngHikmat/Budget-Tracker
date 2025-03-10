@@ -28,7 +28,7 @@ export default function BudgetSummary() {
         _hover={{ shadow: "lg" }}
       >
         <Stat.ValueText fontWeight="bold">الإيرادات</Stat.ValueText>
-        <Stat.ValueUnit>{totalIncome} ريال</Stat.ValueUnit>
+        <Stat.ValueUnit>{totalIncome} دينار</Stat.ValueUnit>
         <StatHelpText>إجمالي المدخلات</StatHelpText>
       </Stat.Root>
       <Stat.Root
@@ -40,7 +40,7 @@ export default function BudgetSummary() {
         _hover={{ shadow: "lg" }}
       >
         <Stat.ValueText fontWeight="bold">المصروفات</Stat.ValueText>
-        <Stat.ValueUnit>{getTotalExpenses()} ريال</Stat.ValueUnit>
+        <Stat.ValueUnit>{getTotalExpenses()} دينار</Stat.ValueUnit>
         <StatHelpText>إجمالي المخرجات</StatHelpText>
       </Stat.Root>
       <Stat.Root
@@ -53,7 +53,7 @@ export default function BudgetSummary() {
       >
         <Stat.ValueText fontWeight="bold">الرصيد</Stat.ValueText>
         <Flex align="center" justify="space-between">
-          <Stat.ValueUnit>{balance} ريال</Stat.ValueUnit>
+          <Stat.ValueUnit>{balance} دينار</Stat.ValueUnit>
           <ProgressCircle.Root size="md" value={remainingPercentage}>
             <ProgressCircle.Circle>
               <ProgressCircle.Track />
