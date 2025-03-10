@@ -8,7 +8,7 @@ export default function TransactionList() {
     <VStack
       gap={4}
       w="full"
-      overflowY="scroll"
+      overflowY={transactions.length > 4 ? "scroll" : "hidden"}
       h="50vh"
       css={{
         "&::-webkit-scrollbar": {
