@@ -16,6 +16,10 @@ const config = defineConfig({
           300: { value: "#4A5568" },
         },
       },
+      fonts: {
+        heading: { value: "'Cairo', sans-serif" },
+        body: { value: "'Cairo', sans-serif" },
+      },
     },
   },
 });

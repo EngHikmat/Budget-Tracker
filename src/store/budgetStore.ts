@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 
 export type Transaction = {
   id: string;
-  type: "income" | "expense";
+  type: string[];
   amount: number;
   description: string;
   date: string;
@@ -39,11 +39,11 @@ export const useBudgetStore = create<BudgetState>()(
         })),
       getTotalIncome: () =>
         get()
-          .transactions.filter((t) => t.type === "income")
+          .transactions.filter((t) => t.type[0] === "income")
           .reduce((sum, t) => sum + t.amount, 0),
       getTotalExpenses: () =>
         get()
-          .transactions.filter((t) => t.type === "expense")
+          .transactions.filter((t) => t.type[0] === "expense")
           .reduce((sum, t) => sum + t.amount, 0),
       getBalance: () => get().getTotalIncome() - get().getTotalExpenses(),
     }),
