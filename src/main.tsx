@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider, createSystem } from "@chakra-ui/react"; // Correct import for v2
 import App from "./App";
+import "./index.css";
 
 import themeConfig from "../theme";
 

@@ -1,7 +1,6 @@
-/* src/index.css */
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+/* @font-face {
+  font-family: "GE SS Two Light";
+  src: url("./assets/GE-SS-Two-Light.otf") format("opentype");
+} */
 
-body {
-  margin: 0;
-  font-family: "Cairo", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");

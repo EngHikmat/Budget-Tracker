@@ -17,8 +17,8 @@ const config = defineConfig({
         },
       },
       fonts: {
-        heading: { value: "'Cairo', sans-serif" },
-        body: { value: "'Cairo', sans-serif" },
+        heading: { value: "'Almarai', sans-serif" },
+        body: { value: "'Almarai', sans-serif" },
       },
     },
   },
